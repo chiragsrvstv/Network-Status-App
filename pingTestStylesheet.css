@@ -1,0 +1,20 @@
+responded {
+    color:green;
+}
+.checking,.unchecked {
+    color:#FF8C00;
+}
+.timeout {
+    color:red;
+}
+body{
+  background: grey
+}
+.heading{
+  color: lime
+}
+button{
+  padding: 0.2em;
+  margin: 4px;
+  height: 30px;
+}

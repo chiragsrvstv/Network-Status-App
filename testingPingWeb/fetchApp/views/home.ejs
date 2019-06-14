@@ -1,0 +1,57 @@
+<style>
+td, th{
+  border: 0.2em solid skyblue;
+  margin: 1em;
+  padding: 1em;
+  background: silver;
+}
+thead{
+  font-weight: bold;
+  color: black;
+}
+
+body{
+  color: #00008B;
+}
+h1{
+  color: orange;
+}
+</style>
+
+<h1> Welcome Aboard ! </h1>
+  <table>
+    <tbody>
+      <thead>
+      <tr>
+        <td> IP </td>
+        <td> Name </td>
+        <td> Status </td>
+      </tr>
+      </thead>
+  <tr>
+    <% data.forEach(function(ip){ %>
+  <td> <%= ip["ip_address"] %> </td>
+  <td> <%= ip["name"] %> </td>
+  <td> <%= ip["status"] %> </td>
+  </tr>
+  <% }); %>
+  </tbody>
+</table>
+
+
+
+<!-- form for adding data -->
+<h3> Create Data </h3>
+<form action = '/createDetails' method="POST">
+  <input type="text" name="ip_address" placeholder="ip address">
+  <input type="text" name="name" placeholder="name">
+  <button> Create </button>
+</form>
+
+
+  <!-- form for deleting data -->
+  <h3> Delete Data </h3>
+  <form action = '/delete' method="POST">
+    <input type="text" name="ipToDelete" placeholder="ipToDelete">
+    <button> Delete </button>
+    </form>

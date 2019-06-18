@@ -1,57 +1,102 @@
-<style>
-td, th{
-  border: 0.2em solid skyblue;
-  margin: 1em;
-  padding: 1em;
-  background: silver;
-}
-thead{
-  font-weight: bold;
-  color: black;
-}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+<link rel="stylesheet" type="text/css" href="/app.css">
+<link rel="stylesheet" type="text/css" href="bootstrap.css">
+  </head>
 
-body{
-  color: #00008B;
-}
-h1{
-  color: orange;
-}
-</style>
+<body>
+  <script type="text/javascript" src = "jquery-3.4.1.min.js"> </script>
 
-<h1> Welcome Aboard ! </h1>
-  <table>
-    <tbody>
-      <thead>
+<div class="container">
+
+
+<h1 class="heading display-1 font-weight-bold"> Welcome Aboard ! </h1>
+
+<div class = "row">
+
+<div class = "col-lg-12">
+  <table class="table table-dark table-striped table-hover">
+      <thead class="thead-dark">
       <tr>
-        <td> IP </td>
-        <td> Name </td>
-        <td> Status </td>
+        <th> IP ADDRESS </th>
+        <th> NAME </th>
+        <th> STATUS </th>
       </tr>
       </thead>
+    <tbody>
   <tr>
     <% data.forEach(function(ip){ %>
   <td> <%= ip["ip_address"] %> </td>
   <td> <%= ip["name"] %> </td>
-  <td> <%= ip["status"] %> </td>
+  <% if(ip["status"] == "Failed"){ %>
+    <audio
+    source src="audio1.wav" type="audio/wav"
+    autoplay>
+
+
+    <td class="bg-danger"> <%= ip["status"] %> </td>
+<% } else{ %>
+  <td class = "bg-success"> <%= ip["status"] %> </td>
+
+<% } %>
+
   </tr>
   <% }); %>
   </tbody>
 </table>
+</div>
+</div>
+
+<script>
+
+/*
+data.forEach(function(ip){
+if(ip["status"] == "Failed"){
+  $("tr").addClass('table-warning');
+} else{
+  $("tr").addClass('table-success');
+  }
+});
+*/
+</script>
 
 
-
+<div class="row">
+<div class="col-lg-8 col-md-12">
 <!-- form for adding data -->
-<h3> Create Data </h3>
+<h4 class="display-4 font-weight-bold"> Create Data </h4>
+
 <form action = '/createDetails' method="POST">
-  <input type="text" name="ip_address" placeholder="ip address">
-  <input type="text" name="name" placeholder="name">
-  <button> Create </button>
-</form>
+  <div class="row ">
+    <div class="col-auto">
+  <input type="text" class="form-control" name="ip_address" placeholder="IP Address">
+    </div>
+  <div class="col-auto">
+  <input type="text" class="form-control" name="name" placeholder="Name">
+  </div>
+  <button type="submit" class="btn btn-success btn-auto active"> Create </button>
+  </div>
+  </form>
+  </div>
 
 
   <!-- form for deleting data -->
-  <h3> Delete Data </h3>
+  <div class="col-lg-4 col-md-12">
+  <h4 class="display-4 font-weight-bold"> Delete Data </h4>
   <form action = '/delete' method="POST">
-    <input type="text" name="ipToDelete" placeholder="ipToDelete">
-    <button> Delete </button>
+    <div class="row">
+      <div class="col-auto">
+    <input type="text" class="form-control" name="ipToDelete" placeholder="IP Address">
+    </div>
+    <button type="submit" class="btn btn-danger btn-auto active"> Delete </button>
+    </div>
     </form>
+  </div>
+  </div>
+  </div>
+</body>
+</html>

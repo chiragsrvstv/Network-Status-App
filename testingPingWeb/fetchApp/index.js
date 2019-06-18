@@ -8,7 +8,7 @@ var bodyParser = require("body-parser");
 // importing queries file
 var db = require('./queries')
 
-//
+//for connectiong APIs
 var request = require("request");
 
 app.use(bodyParser.json())
@@ -18,10 +18,13 @@ app.use(
   })
 )
 
-// just testing some json at home '/'
-//app.get("/", function(req, res){
-//  res.json({info: 'Node.js, Express, and Postgres API'})
-//})
+// using public directory
+app.use(express.static("public"));
+
+// adding Bootstrap
+//const bootstrap = require('bootstrap');
+var jquery = require("jquery");
+var player = require('play-sound')(opts = {})
 
 // tell express to listen for requests(statrt server)
 app.listen(3000, function(){

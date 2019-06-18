@@ -1,0 +1,33 @@
+/*
+td, th{
+  border: 0.2em solid skyblue;
+  margin: 1em;
+  padding: 1em;
+  background: silver;
+}
+thead{
+  font-weight: bold;
+  color: black;
+}
+*/
+
+body{
+  background-image: url("img/skyscrapers-413687_1920.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+h1{
+  color: white;
+  text-shadow: 3px 3px black;
+}
+
+h4{
+  color:white;
+  text-shadow: 2px 2px 4px #000000;
+}
+table{
+  box-shadow: 8px 8px 8px 8px #666666;
+}

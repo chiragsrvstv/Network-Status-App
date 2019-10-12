@@ -8,19 +8,19 @@ feedback just for the ease of access for users.
 
 ## Installation
 
-** For Linux/Mac: **
+**For Linux/Mac:**
 1. Open terminal and `cd` into the downloaded directory `Network-Status-App/testingPingWeb/fetchApp`
 2. Make sure NodeJS and npm is installed. For help visit: https://www.nodejs.org/en/
 3. Now run `npm install express` to install express framework.
 4. Similarly install other dependencies using `npm` from `package.json` 
 5. Set up the PostgreSQL database `hostinfo`(according to the schema discussed) referencing the python script, 
-   for reference visit : `https://www.postgresql.org/'
+   for reference visit : https://www.postgresql.org/
 6. Now run `node index.js` 
 7. Then cd into `Network-Status-App/testinPing/venv` 
 8. Now on the terminal run `python app.py` (or any Python IDE) to run the Python Script
 9. Now go to `localhost:3000` from any web browser to view the home page of the app.
 
-** For Windows: **
+**For Windows:**
 1. Install GitBash for windows to run linux type bash terminal, for help visit: https://git-scm.com/downloads
 2. Install Python for windows, visit: https://www.python.org/
 3. Install PostgreSQL, for help visit: https://www.postgresql.org/docs/9.2/app-psql.html
@@ -29,8 +29,17 @@ feedback just for the ease of access for users.
 6. Now run `npm install express` to install express framework.
 7. Similarly install other dependencies using `npm` from `package.json` 
 8. Set up the PostgreSQL database `hostinfo`(according to the schema discussed) referencing the python script, 
-   for reference visit : `https://www.postgresql.org/'
+   for reference visit : https://www.postgresql.org/
 9. Now run `node index.js` 
 10. Then cd into `Network-Status-App/testinPing/venv` 
 11. Now on the Git Bash terminal run `python app.py` (or any Python IDE) to run the Python Script
 12. Now go to `localhost:3000` from any web browser to view the home page of the app.
+
+**Database Setup**
+1. Install PostgreSQL, visit: https://www.postgresql.org/
+2. Run the following queries from running the PostgreSQL interactive terminal program, called psql.
+   `createdb hostinfo`
+   `psql hostinfo`
+   `create table details (name varchar(40), ip_address inet, status varchar(20));`
+3. Now, the database and table both are created, to rectify run the query `\dt;` inside psql and see
+   if the name of the table created exists.

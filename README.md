@@ -40,7 +40,7 @@ feedback just for the ease of access for users.
 **Database Setup**
 1. Install PostgreSQL, visit: https://www.postgresql.org/ or http://www.postgresqltutorial.com/install-postgresql/
 2. At the time of installation leave everything default except Username: `postgres`, Password: `1234`and Port: `5432` 
-3. Run the following queries from running the PostgreSQL interactive terminal program, called psql.
+3. Run the following queries from running the PostgreSQL interactive terminal program, called psql.<br />
    `createdb hostinfo` <br />
    `psql hostinfo` <br />
    `create table details (name varchar(40), ip_address inet, status varchar(20));` <br />

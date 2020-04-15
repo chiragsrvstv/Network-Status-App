@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- meta tag to auto refresh page every 10 seconds -->
+    <meta http-equiv="refresh" content="10"/>
     <title></title>
 <link rel="stylesheet" type="text/css" href="/app.css">
 <link rel="stylesheet" type="text/css" href="bootstrap.css">
@@ -13,8 +16,9 @@
 
 <div class="container">
 
-
-<h1 class="heading display-1 font-weight-bold"> Welcome Aboard ! </h1>
+<div class="row">
+<h1 class="heading display-1 font-weight-bold"> Dashboard </h1>
+</div>
 
 <div class = "row">
 
@@ -50,7 +54,6 @@
 </table>
 </div>
 </div>
-
 <script>
 
 /*
@@ -66,10 +69,9 @@ if(ip["status"] == "Failed"){
 
 
 <div class="row">
-<div class="col-lg-8 col-md-12">
+<div class="col-lg-7 col-md-12 col-sm-12 create-form">
 <!-- form for adding data -->
 <h4 class="display-4 font-weight-bold"> Create Data </h4>
-
 <form action = '/createDetails' method="POST">
   <div class="row ">
     <div class="col-auto">
@@ -85,7 +87,7 @@ if(ip["status"] == "Failed"){
 
 
   <!-- form for deleting data -->
-  <div class="col-lg-4 col-md-12">
+  <div class="col-lg-5 col-md-12 col-sm-12 delete-form">
   <h4 class="display-4 font-weight-bold"> Delete Data </h4>
   <form action = '/delete' method="POST">
     <div class="row">

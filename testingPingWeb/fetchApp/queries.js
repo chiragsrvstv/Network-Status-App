@@ -1,11 +1,11 @@
 var Pool = require('pg').Pool
 var pool = new Pool({
-  user: 'postgres',
+  user: 'chiragsrivastava',
   host: 'localhost',
   database: 'hostinfo',
   password:'1234',
   port: '5432'
-})
+});
 
 var srcFile = require('./index.js');
 

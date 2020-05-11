@@ -16,19 +16,19 @@ feedback just for the ease of access for users.
 4. Open terminal and `cd` into the downloaded directory `Network-Status-App/testingPingWeb/fetchApp`
 5. Make sure NodeJS and npm is installed. For help visit: https://www.nodejs.org/en/
 6. Now run `npm install express` to install express framework.
-7. Similarly install other dependencies using `npm` from `package.json` 
+7. Similarly install other dependencies by running: `npm install`. 
 8. Set up the PostgreSQL database `hostinfo`(according to the Database Setup instructions) referencing the python script, 
    for reference visit : https://www.postgresql.org/
 9. Now run `node index.js` 
 10. Then cd into `Network-Status-App/testinPing/venv` 
-11. Now on the Git Bash terminal run `python app.py` (or any Python IDE) to run the Python Script
+11. Now on the Git Bash terminal run `python app.py` (or any other Python IDE) to run the Python Script
 12. Now go to `localhost:3000` from any web browser to view the home page of the app.
 
-**For Linux/Mac:**
+**For Linux and Mac:**
 1. Open terminal and `cd` into the downloaded directory `Network-Status-App/testingPingWeb/fetchApp`
 2. Make sure NodeJS and npm is installed. For help visit: https://www.nodejs.org/en/
 3. Now run `npm install express` to install express framework.
-4. Similarly install other dependencies using `npm` from `package.json` 
+4. Similarly install other dependencies by running `npm install`.
 5. Set up the PostgreSQL database `hostinfo`(according to the Database Setup instructions) referencing the python script, 
    for reference visit : https://www.postgresql.org/
 6. Now run `node index.js` 
